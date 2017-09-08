@@ -22,7 +22,7 @@ def main(filename):
 	X = dataset()
 	if filename != None:
 		np.savetxt(filename, X)
-	plt.scatter(X[:, 0], X[:, 1], c=["blue" for i in range(len(X))])
+	plt.scatter(X[:, 0], X[:, 1], c=["blue" for i in range(len(X))], s=5)
 	plt.xlim(-10, 10)
 	plt.ylim(-10, 10)
 	#plt.savefig("output.png")
