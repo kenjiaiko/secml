@@ -11,11 +11,13 @@ import sys
 
 import gm
 
-def main(filename, num):
-	X = np.loadtxt(filename)
+def main(filename1, filename2, num):
+	X = np.loadtxt(filename2)
+	Y = np.loadtxt(filename1)
 	model = gm.GaussianMixture(num)
 	model.fit(X, iter_max=100)
 	labels = model.classify(X)
+	plt.scatter(Y[:, 0], Y[:, 1], s=5)
 	plt.scatter(X[:, 0], X[:, 1], s=5)
 	x_test, y_test = np.meshgrid(np.linspace(-10, 10, 100), np.linspace(-10, 10, 100))
 	probs = model.predict_proba(np.array([x_test, y_test]).reshape(2, -1).transpose())
@@ -26,10 +28,11 @@ def main(filename, num):
 	plt.show()
 
 if __name__ == '__main__':
-	if len(sys.argv) < 3:
-		print "python this.py <filepath> <num of clusters>"
+	if len(sys.argv) < 4:
+		print "python this.py <original filepath> <filepath> <num of clusters>"
 		sys.exit(1)
-	filename = sys.argv[1]
-	num = int(sys.argv[2])
-	main(filename, num)
+	filename1 = sys.argv[1]
+	filename2 = sys.argv[2]
+	num = int(sys.argv[3])
+	main(filename1, filename2, num)
 
