@@ -20,8 +20,8 @@
     $ python load_dataset2-2.py sample3.txt
 ![python load_dataset2-2.py sample3.txt](pngs/figure_7.png "python load_dataset2-2.py sample3.txt")
 
-    $ python load_dataset2-3.py sample3.txt
-![python load_dataset2-3.py sample3.txt](pngs/figure_8.png "python load_dataset2-3.py sample3.txt")
+    $ python load_dataset2-3.py sample3.txt 3
+![python load_dataset2-3.py sample3.txt 3](pngs/figure_8.png "python load_dataset2-3.py sample3.txt 3")
 
     $ python load_dataset2-4.py sample2.txt sample3.txt 3
 ![python load_dataset2-4.py sample2.txt sample3.txt](pngs/figure_9.png "python load_dataset2-4.py sample2.txt sample3.txt 3")
