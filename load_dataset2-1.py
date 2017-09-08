@@ -3,8 +3,8 @@
 
 import numpy as np
 # -- bash on Windows
-import matplotlib
-matplotlib.use('Agg')
+#import matplotlib
+#matplotlib.use('Agg')
 # --
 import matplotlib.pyplot as plt
 import sys
@@ -26,8 +26,8 @@ def main(readfile, writefile):
 	plt.scatter(X[:, 0], X[:, 1], c=[label for label in labels], s=5)
 	plt.xlim(-10, 10)
 	plt.ylim(-10, 10)
-	plt.savefig("output.png")
-	#plt.show()
+	#plt.savefig("output.png")
+	plt.show()
 
 if __name__ == '__main__':
 	if len(sys.argv) < 3:

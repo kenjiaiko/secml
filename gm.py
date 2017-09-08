@@ -5,7 +5,7 @@ import numpy as np
 import sys
 
 class GaussianMixture(object):
-	
+	# reference: http://qiita.com/ctgk/items/22ce61fc0ffbc12c64d1
 	def __init__(self, n_component):
 		self.n_component = n_component
 	

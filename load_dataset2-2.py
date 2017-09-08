@@ -3,8 +3,8 @@
 
 import numpy as np
 # -- bash on Windows
-import matplotlib
-matplotlib.use('Agg')
+#import matplotlib
+#matplotlib.use('Agg')
 # --
 import matplotlib.pyplot as plt
 import sys
@@ -17,8 +17,8 @@ def main(readfile):
 	r = linkage(pdist((X)))
 	print r
 	dendrogram(r)
-	plt.savefig("output.png")
-	#plt.show()
+	#plt.savefig("output.png")
+	plt.show()
 
 if __name__ == '__main__':
 	if len(sys.argv) < 2:

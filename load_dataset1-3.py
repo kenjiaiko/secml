@@ -3,8 +3,8 @@
 
 import numpy as np
 # -- bash on Windows
-import matplotlib
-matplotlib.use('Agg')
+#import matplotlib
+#matplotlib.use('Agg')
 # --
 import matplotlib.pyplot as plt
 import sys
@@ -23,8 +23,8 @@ def main(filename):
 	plt.contour(x_test, y_test, probs.reshape(100, 100), levels=[i for i in np.arange(0.0, 1.0, 0.01)])
 	plt.xlim(-10, 10)
 	plt.ylim(-10, 10)
-	plt.savefig("output.png")
-	#plt.show()
+	#plt.savefig("output.png")
+	plt.show()
 
 if __name__ == '__main__':
 	if len(sys.argv) < 2:
