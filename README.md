@@ -7,7 +7,7 @@ I'll show an example of data-set Da. For example, it is an information of report
 
 <img src="pngs/figure_6.png" width="160px"><img src="pngs/figure_9.png" width="160px">
 
-In short, given data-set like the one on the left figure, I want to draw a blue circle (an arbitrary number) in the right figure. The circles are not necessarily three.
+In short, given data-set like the one on the left figure, we want to draw a blue circle (an arbitrary number) in the right figure. The circles are not necessarily three.
 
 ```
 $ python load_dataset0-1.py sample0.txt
