@@ -1,6 +1,6 @@
 # secml
     $ python load_dataset0-1.py sample0.txt
-![python load_dataset0-1.py sample0.txt](pngs/figure_1.png "python load_dataset0-1.py sample0.txt")
+<img src="pngs/figure_1.png" width="320px">
 
     $ python load_dataset0-2.py sample0.txt
 ![python load_dataset0-2.py sample0.txt](pngs/figure_2.png "python load_dataset0-2.py sample0.txt")
