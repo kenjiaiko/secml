@@ -5,6 +5,8 @@ First, I want to define some symbols. t is the current time, D(t) is the data-se
 
 I'll show an example of data-set Da. For example, it is an information of reported from some users regularly. You can not trust 100% reputation from users. Of course, many users accurately report malignant as a malignant, but not all users can judge it accurately. In some cases, many benignities may be included in there. Therefore, the first problem is to label it, which is to separate benign and malignant ones.
 
+<img src="pngs/figure_6.png" width="160px"><img src="pngs/figure_9.png" width="160px">
+
 ```
 $ python load_dataset0-1.py sample0.txt
 $ python load_dataset0-2.py sample0.txt
