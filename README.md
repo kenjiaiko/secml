@@ -30,3 +30,4 @@ $ python load_dataset2-4.py sample2.txt sample3.txt 3
 
 This is automatable.
 
+Both Da and Db are Concept-Drift, but if you can label Da like this, you can use it to detect some malignants in Db.
