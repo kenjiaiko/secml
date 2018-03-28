@@ -12,7 +12,7 @@ import sys
 from scipy.spatial.distance import pdist
 from scipy.cluster.hierarchy import linkage, dendrogram
 
-def aaa(X, debug):
+def get_num_of_clusters(X, debug):
 	r = linkage(pdist((X)))
 	if debug == True:
 		dendrogram(r)
@@ -51,7 +51,9 @@ def aaa(X, debug):
 		c = d
 	return c
 
-def main(imgfile1x, imgfile2x, saved_path):
-
 if __name__ == '__main__':
+	readfile = sys.argv[1]
+	r = get_num_of_clusters(np.loadtxt(readfile), True)
+	print "num of clusters: " + str(len(r))
+	print r
 
