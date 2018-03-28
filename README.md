@@ -21,3 +21,9 @@ $ python load_dataset2-3.py sample3.txt 3
 $ python load_dataset2-4.py sample2.txt sample3.txt 3
 ```
 <img src="pngs/figure_1.png" width="160px"><img src="pngs/figure_2.png" width="160px"><img src="pngs/figure_3.png" width="160px"><img src="pngs/figure_4.png" width="160px"><img src="pngs/figure_5.png" width="160px"><img src="pngs/figure_6.png" width="160px"><img src="pngs/figure_7.png" width="160px"><img src="pngs/figure_8.png" width="160px"><img src="pngs/figure_9.png" width="160px">
+
+1. Delete scattered benign data (load_dataset2-1.py)
+2. Count the number of clusters　
+3. Set the number of clusters and find the center point of each clusters
+
+This is automatable.
