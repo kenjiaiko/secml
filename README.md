@@ -29,3 +29,4 @@ $ python load_dataset2-4.py sample2.txt sample3.txt 3
 3. Set the number of clusters and find the center point of each clusters
 
 This is automatable.
+
