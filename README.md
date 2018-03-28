@@ -9,7 +9,7 @@ I'll show an example of data-set Da. For example, it is an information of report
 
 <img src="pngs/figure_6.png" width="160px"><img src="pngs/figure_9.png" width="160px">
 
-In short, given data-set (that is Scale-free) like the one on the left figure, we want to draw a blue circle (an arbitrary number) in the right figure. The circles are not necessarily three.
+They are scattered throughout but the malignant ones gather themselves in some place. We want to find "N blue circles" in right figure (N=3 in this example) basing from a model we get with a data-set similar to the left figure. The data inside the blue circles are a malignant, the data outside of it are benign. In short, given data-set (that is Scale-free) like the one on the left figure, we want to draw a blue circle (an arbitrary number) in the right figure.
 
 ```
 $ python load_dataset0-1.py sample0.txt
