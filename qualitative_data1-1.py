@@ -31,6 +31,16 @@ for i in range(N):
 		result.setdefault(_cmp, 0)
 		result[_cmp] += 1
 
+_tmp = result
+for k, v in sorted(result.items(), key=lambda x:x[1], reverse=True):
+	_cnt = 0
+	for i in range(len(k)):
+		if k[i] == "*":
+			continue
+		_cnt += 1
+	_tmp[k] *= 6 ** (_cnt - 1)
+result = _tmp
+
 print "SCORE: "
 for k, v in sorted(result.items(), key=lambda x:x[1], reverse=True):
 	print k, v
@@ -50,7 +60,7 @@ for d in dataset:
 			if d[i] == k[i]:
 				_cnt += 1
 		if _all == _cnt:
-			_total += result[k] * (6 ** (_all - 1))
+			_total += result[k]
 	total.setdefault(d, 0)
 	total[d] = _total
 
