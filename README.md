@@ -1,11 +1,12 @@
-# Basis
+# Detection automation method for data sets with Concept Drift and Scale-free natures
+## Basis
 A data sets in security typified by malware and spam messages are constantly changing their nature according to time axis, so it is difficult to implement countermeasures permanently. In this paper, we focus on the Scale-free of a data set with the property of Concept-Drift and propose a method to detect while following automatically the change of data distribution.
 
 <img src="pngs/time.png" width="480px">
 
 First, I want to define some symbols. t is the current time, D(t) is the data-set on the current time. Da(t−n) is a data-set that can be used for learning, Db(t+m) is a data-set we want to detect. Da and Db has both "malignant" and "benign", are NOT labeled, but Da is [Scale-free](https://en.wikipedia.org/wiki/Scale-free_network). And these data-set is [Concept-Drift](https://en.wikipedia.org/wiki/Concept_drift), constantly changing. So we want to automatically detect a malignant in Db using Da.
 
-## Quantitative data
+### Quantitative data
 I'll show an example of data-set Da. For example, it is an information of reported from some users regularly. You can not trust 100% reputation from users. Of course, many users accurately report malignant as a malignant, but not all users can judge it accurately. In some cases, many benignities may be included in there. Therefore, the first problem is to label it, which is to separate benign and malignant ones.
 
 <img src="pngs/figure_6.png" width="160px"><img src="pngs/figure_9.png" width="160px">
@@ -32,7 +33,7 @@ $ python load_dataset3-1.py sample4.txt
 
 This is automatable. Both Da and Db are Concept-Drift, but if you can label Da like this, you can use it to automatically detect some malignants in Db.
 
-## Qualitative data
+### Qualitative data
 I also want to do same thing for qualitative data.
 ```
 ECA__: "ECAEA", "ECAAD", "ECACA", "ECABB", "ECACA"
@@ -41,3 +42,4 @@ Other: "ABCDE", "DDFEA", "BCDAA", "FFFED", "AAAAA", "EEEEE", "BBDBB"
 ```
 This is a sample data-set. There are 5 questions, each with 6 patterns (A to F) answers. The problem is finding features that exist in as much (but not all) of the data as possible. In short, I want to find "ECA" and "BAB" from the sample data-set. If there is an algorithm that extracts the common parts of the 2 data, it is possible (refer to [qualitative_data1-1.py](https://github.com/kenjiaiko/secml/blob/master/qualitative_data1-1.py)).
 
+## String
