@@ -11,7 +11,6 @@ I'll show an example of data-set Da. For example, it is an information of report
 <img src="pngs/figure_6.png" width="160px"><img src="pngs/figure_9.png" width="160px">
 
 They are scattered throughout but the malignant ones gather themselves in some place. We want to find "N blue circles" in right figure (N=3 in this example) basing from a model we get with a data-set similar to the left figure. The data inside the blue circles are a malignant, the data outside of it are benign. In short, given data-set (that is Scale-free) like the one on the left figure, we want to draw a blue circle (an arbitrary number) in the right figure.
-
 ```
 $ python load_dataset0-1.py sample0.txt
 $ python load_dataset0-2.py sample0.txt
@@ -45,5 +44,19 @@ This is a sample data-set. There are 5 questions, each with 6 patterns (A to F) 
 We want to know a common substring or subsequence of malignants, so we could use the [Longest common substring](https://en.wikipedia.org/wiki/Longest_common_substring_problem) or [Longest common subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) for it. We can use the substring as a feature if we extract longest common substring/subsequence in some strings. The message containing the LCS has a high possibility of malignancy (ex: [Suffix Tree Application 5 Longest common substring](https://www.geeksforgeeks.org/suffix-tree-application-5-longest-common-substring-2/)).
 
 [Suffix trees](https://en.wikipedia.org/wiki/Suffix_tree) provide one of the first linear-time solutions for the Longest common substring problem. Likewise, using the Suffix tree, you can extract common (substring) features from messages. Please refer to [qualitative_data1-2.py](https://github.com/kenjiaiko/secml/blob/master/qualitative_data1-2.py).
+```
+// sample5.json
+*ECA*: "FAECAEA", "BCCECAAD", "ECACA", "ECAB", "EECACA", "EECA", "ECAA",
+*BAB*: "FBABFBA", "ABAB", "DCCCEFDBABA",
+Other: "ABCDEDE", "DDFEADEF", "BCDAAB", "FFFEDE", "AAAAA", "EEE", "BBDBBD"
+```
+
+```
+$ python qualitative_data1-2.py sample5.json 
+ECA was included in 7 data.
+BAB was included in 3 data.
+ACA was included in 2 data.
+...
+```
 
 Next, let's consider about common subsequence of messages. If the number of generic input columns is arbitrary, Longest common subsequence is [NP-Hard](https://en.wikipedia.org/wiki/NP-hardness). So ingenuity may be necessary depending on the amount of data. Below is a sample algorithm. Please refer to [qualitative_data1-3.py](https://github.com/kenjiaiko/secml/blob/master/qualitative_data1-3.py).
