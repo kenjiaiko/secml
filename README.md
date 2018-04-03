@@ -46,8 +46,8 @@ Next, I want to discuss about one-dimension array data, like string. We want to 
 [Suffix trees](https://en.wikipedia.org/wiki/Suffix_tree) provide one of the first linear-time solutions for the Longest common substring problem. Likewise, using the Suffix tree, you can extract common (substring) features from messages. Please refer to [qualitative_data1-2.py](https://github.com/kenjiaiko/secml/blob/master/qualitative_data1-2.py).
 ```
 // sample5.json
-*ECA*: "FAECAEA", "BCCECAAD", "ECACA", "ECAB", "EECACA", "EECA", "ECAA",
-*BAB*: "FBABFBA", "ABAB", "DCCCEFDBABA",
+*ECA*: "FAECAEA", "BCCECAAD", "ECACA", "ECAB", "EECACA", "EECA", "ECAA"
+*BAB*: "FBABFBA", "ABAB", "DCCCEFDBABA"
 Other: "ABCDEDE", "DDFEADEF", "BCDAAB", "FFFEDE", "AAAAA", "EEE", "BBDBBD"
 ```
 
@@ -59,3 +59,17 @@ ACA was included in 2 data.
 ...
 ```
 Let's also consider about common subsequence of messages. If the number of generic input columns is arbitrary, Longest common subsequence is [NP-Hard](https://en.wikipedia.org/wiki/NP-hardness). So ingenuity may be necessary depending on the amount of data. Please refer to [qualitative_data1-3.py](https://github.com/kenjiaiko/secml/blob/master/qualitative_data1-3.py).
+```
+*ECA*: "EfaCeAb", "bccECAb", "EaCcA", "ECbA", "aaECdA", "eECA", "ECAab"
+*BAB*: "fBAdfBa", "aBAB", "BdcccefdAaBc", "abcdBAB"
+Other: "abcdede", "ddfeadef", "bcdaab", "fffede", "aaaaa", "eee", "bbdbbd"
+```
+
+```
+$ python qualitative_data1-3.py sample6.json 
+ECA was included in 7 data.
+ECb was included in 4 data.
+BAB was included in 4 data.
+ede was included in 3 data.
+...
+```
