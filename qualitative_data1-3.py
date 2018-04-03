@@ -49,7 +49,7 @@ def main(filepath):
 		result.setdefault(k, 0)
 		result[k] = _cnt
 	for k, v in sorted(result.items(), key=lambda x:x[1], reverse=True):
-		print k, v
+		print k + " was included in " + str(v) + " data."
 
 if __name__ == "__main__": 
 	sys.setrecursionlimit(1000000)
