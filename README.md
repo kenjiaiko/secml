@@ -60,6 +60,7 @@ ACA was included in 2 data.
 ```
 Let's also consider about common subsequence of messages. If the number of generic input columns is arbitrary, Longest common subsequence is [NP-Hard](https://en.wikipedia.org/wiki/NP-hardness). So ingenuity may be necessary depending on the amount of data. Please refer to [qualitative_data1-3.py](https://github.com/kenjiaiko/secml/blob/master/qualitative_data1-3.py).
 ```
+// sample6.json
 *ECA*: "EfaCeAb", "bccECAb", "EaCcA", "ECbA", "aaECdA", "eECA", "ECAab"
 *BAB*: "fBAdfBa", "aBAB", "BdcccefdAaBc", "abcdBAB"
 Other: "abcdede", "ddfeadef", "bcdaab", "fffede", "aaaaa", "eee", "bbdbbd"
