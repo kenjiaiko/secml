@@ -93,7 +93,7 @@ def main(imgfile1x, imgfile2x, saved_path):
 	m_data = []
 	for v in data:
 		m_data.append( (v[0] / float(100), v[1] / float(100)) )
-	label = clustring(m_data, 0.5)
+	label = clustering(m_data, 0.5)
 	l_data= []
 	for a in label:
 		one = []
