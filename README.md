@@ -99,7 +99,11 @@ A good model is also high with False-Positive rate but False-Positive rate shoul
 * You can investigate the cause (reason) of False-Positive if you found a data of False-Positive
 * For automation, the system can update learning-data on a regular basis
 
-False positivity means that there is a "benign class (red circle)" in the "malicious class (blue circle)". So, one good way to lower False-Positive is to add a white list filter. Collect only the erroneously detected data sets and extract their features, make white list filter (white list filter should be simple). The method of combining two or more algorithms with AND/OR is often effective for lowering/raising False-Positive/True-Positive (False-Positive and True-Positive are trade offs).
+False positivity means that there is a "benign class (red circle)" in the "malicious class (blue circle)".
+
+<img src="pngs/fp_in_circle.png" width="240px">
+
+So, one good way to lower False-Positive is to add a white list filter. Collect only the erroneously detected data sets and extract their features, make white list filter (white list filter should be simple). The method of combining two or more algorithms with AND/OR is often effective for lowering/raising False-Positive/True-Positive (False-Positive and True-Positive are trade offs).
 
 ### Automation Risk
 If a malicious user can create a large number of accounts, it can trigger False-Positive in the system. Reputation-based data is a result of reported from (user) accounts. So the system mistakenly adds the normal message to black list, if many accounts (controlled by malicious user) reported same normal message (pollution attack). We will need to discus about False-Positve again.
