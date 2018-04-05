@@ -78,3 +78,7 @@ ede was included in 3 data.
 ## Image
 How about two-dimension array data, like images. We also want to do same thing for Image. There are several research how to extract common features of images (ex: [Feature Detection and Description](https://docs.opencv.org/master/db/d27/tutorial_py_table_of_contents_feature2d.html), [Grad-CAM: Why did you say that? Visual Explanations from Deep Networks via Gradient-based Localization](https://github.com/ramprs/grad-cam/)).
 
+I'd like to introduce a method of extracting similar parts in two images. When these similar parts (area) are detected using opencv, they are as shown on the below. From the result of opencv, the method of extracting similar areas on the two images, is [image_data1-1.py](https://github.com/kenjiaiko/secml/blob/master/image_data1-1.py).
+
+<img src="pngs/figure_11.jpg" width="520px">
+
