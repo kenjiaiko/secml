@@ -101,7 +101,7 @@ A good model is also high with False-Positive rate but False-Positive rate shoul
 
 False positivity means that there is a "benign class (red circle)" in the "malicious class (blue circle)".
 
-<img src="pngs/fp_in_circle.png" width="240px">
+<img src="pngs/fp_in_circle.png" width="180px">
 
 So, one good way to lower False-Positive is to add a white list filter. Collect only the erroneously detected data sets and extract their features, make white list filter (white list filter should be simple). The method of combining two or more algorithms with AND/OR is often effective for lowering/raising False-Positive/True-Positive (False-Positive and True-Positive are trade offs).
 
