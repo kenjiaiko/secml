@@ -91,3 +91,13 @@ image_data1-1.py will output 2 images([saved/1.jpg](saved/1.jpg), [saved/2.jpg](
 "Words" are features of strings, "Objects" are features of images. So (ideally) we want to use a object as a feature, but it is difficult. For example, [opencv](https://docs.opencv.org/master/d1/de0/tutorial_py_feature_homography.html) and [tensorflow](https://github.com/tensorflow/models/tree/master/research/object_detection) have the function for "object detection". However it seems that it is impossible to perfectly detect objects (ex: [Deep neural networks are easily fooled](http://www.evolvingai.org/fooling)). In addition, "object detection" is very heavy.
 
  Images are different from strings, and it is difficult to extract features. Automation is possible, but you will need to be concerned about FalsePositive.
+
+## Reference
+* [1] Barabási, Albert-László and . Albert, Emergence of scaling in random networks, Science, 1999
+* [2] Game, J.; Zliobaite, I.; Bifet, A.; Pechenizkiy, M.; and Bouchachia, A. 2014. A Survey on Concept Drift Adaptation. ACM Computing Surveys (CSUR) 46(4):44.
+* [3] M. Iwamura, M. Itoh, and Y. Muraoka, Automatic Malware Classification System Based on Similarity of Machine Code Instructions, CSS, 2010
+* [4] P. Weiner (1973). Linear pattern matching algorithm. 14th Annual IEEE Symposium on Switching and Automata Theory. pp. 1-11.
+* [5] Edward M. McCreight (1976). A Space-Economical Suffix Tree Construction Algorithm. Journal of the ACM 23 (2): 262–272.
+* [6] E. Ukkonen (1995). On-line construction of suffix trees. Algorithmica 14 (3): 249–260.
+* [7] R. Giegerich and S. Kurtz (1997). From Ukkonen to McCreight and Weiner: A Unifying View of Linear-Time Suffix Tree Construction. Algorithmica 19 (3): 331–353.
+* [8] Nguyen A, Yosinski J, Clune J. Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images. In Computer Vision and Pattern Recognition (CVPR '15), IEEE, 2015. (http://www.evolvingai.org/fooling)
