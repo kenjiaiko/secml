@@ -74,3 +74,7 @@ BAB was included in 4 data.
 ede was included in 3 data.
 ...
 ```
+
+## Image
+How about two-dimension array data, like images. We also want to do same thing for Image. There are several research how to extract common features of images (ex: [Feature Detection and Description](https://docs.opencv.org/master/db/d27/tutorial_py_table_of_contents_feature2d.html), [Grad-CAM: Why did you say that? Visual Explanations from Deep Networks via Gradient-based Localization](https://github.com/ramprs/grad-cam/)).
+
