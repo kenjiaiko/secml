@@ -116,7 +116,7 @@ Many types of data-sets follow Scale-free, it is not related to malignant users.
 
 The [rank size rule](https://en.wikipedia.org/wiki/Rank-size_distribution) states that for cities exceeding some size in a particular country, the relationship between size and rank of cities is given by:
 
-<img src="pngs/math1.png" width="100px">
+<img src="pngs/math1.png" width="120px">
 
 P(r) is population of r-th ranked city, q is a coefficient. The rank size rule is also observed in fields other than cities. We rank in order from high reported count, and the reported count of the r-th place, is P(r). In the reported dataset without a malignant, P(1) is very small. And as malignant increases, the count of reported of top-ranks increases.
 
