@@ -75,7 +75,7 @@ ede was included in 3 data.
 ...
 ```
 
-LCS is the one of the method to solve it, there will be several others. The important thing is to find features that exist in as much (but not all) of the data as possible.
+LCS is the one of the method to solve it, this is not the only solution. The important thing is to find features that exist in as much (but not all) of the data as possible.
 
 ## Image
 How about two-dimension array data, like images. We also want to do same thing for Image. There are several research how to extract common features of images (ex: [Feature Detection and Description](https://docs.opencv.org/master/db/d27/tutorial_py_table_of_contents_feature2d.html), [Grad-CAM: Why did you say that? Visual Explanations from Deep Networks via Gradient-based Localization](https://github.com/ramprs/grad-cam/)).
