@@ -108,6 +108,26 @@ So, one good way to lower False-Positive is to add a white list filter. Collect 
 ### Automation Risk
 If a malicious user can create a large number of accounts, it can trigger False-Positive in the system. Reputation-based data is a result of reported from (user) accounts. So the system mistakenly adds the normal message to black list, if many accounts (controlled by malicious user) reported same normal message (pollution attack). We will need to discus about False-Positve again.
  
+## Scale-free and Concept-Drift
+Finally I would like to mention the relationship between Scale-free and Concept-Drift.
+
+Many types of data-sets follow Scale-free, it is not related to malignant users. Because Scale-free is a characteristic that exists regardless of Security, we can not discuss this within the scope of Security only. Therefore, Scale-free is a precondition in this article. On the assumption of scale-free, I'd like to talk about Concept-Drift.
+
+The [rank size rule](https://en.wikipedia.org/wiki/Rank-size_distribution) states that for cities exceeding some size in a particular country, the relationship between size and rank of cities is given by:
+
+<img src="pngs/math1.png" width="100px">
+
+P(r) is population of r-th ranked city, q is a coefficient. The rank size rule is also observed in fields other than cities. We rank in order from high reported count, and the reported count of the r-th place, is P(r). In the reported dataset without a malignant, P(1) is very small. And as malignant increases, the count of reported of top-ranks increases.
+
+In left image, the blue is a model of reported count without a malignant (top-100), the orange is a model of reported count with malignant (top-100). The blue's P(1) is 16, q is 0.45. The orange's P(1) is 2596, q is 1.5. Next, look at the center image. Yellow and red (not linear one) are a real (reported) data. The orange is a model of the yellow, the blue is a model of the red. Blue and red approximate, but orange and yellow are not. What is this gap between orange and yellow?
+ Actually, as malignant increases, it moves away from scale-free. To be accurate, the difference between 1st place and others will be more bigger. That is, the graph flows down. If malignant is not blocked, yellow will grow downwards and it will be maintained. Concept-Drift does not occur in this state.
+ Next, the system will block some malignant (for example, top-10 of reported), then some malignants will (have to) change so that it will not be detected. As a result, it shifts to a structure where multiple malignants occupy the top. This is start of Concept-Drift on security (right image).
+ The graph goes down if the difference between 1st and 2nd is big, it goes up if it is small. The difference between 1st and 2nd is small, means the system have blocked malignants at the moment.
+ For reference, you can also be thought of as follows.
+The measures are not working if it is below the "scale-free line"
+The measures are working if it is above the "scale-free line"
+ Scale-free is a principle of nature, Concept-Drift is human intervention. And Scale-free will have slided by intervention of malignant.
+
 ## Reference
 * [1] Barabási, Albert-László and . Albert, Emergence of scaling in random networks, Science, 1999
 * [2] Game, J.; Zliobaite, I.; Bifet, A.; Pechenizkiy, M.; and Bouchachia, A. 2014. A Survey on Concept Drift Adaptation. ACM Computing Surveys (CSUR) 46(4):44.
