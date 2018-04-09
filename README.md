@@ -120,7 +120,7 @@ The [rank size rule](https://en.wikipedia.org/wiki/Rank-size_distribution) state
 
 P(r) is population of r-th ranked city, q is a coefficient. The rank size rule is also observed in fields other than cities. We rank in order from high reported count, and the reported count of the r-th place, is P(r). In the reported dataset without a malignant, P(1) is very small. And as malignant increases, the count of reported of top-ranks increases.
 
-<img src="pngs/scale-free.png" width="180px"><img src="pngs/scale-free2.png" width="180px">
+<img src="pngs/scale-free.png" width="180px"><img src="pngs/scale-free2.png" width="180px"><img src="pngs/scale-free3.png" width="180px">
 
 In the left image, the blue is a model of reported count without a malignant, the orange is a model of reported count with malignant. The blue's P(1) is 16, q is 0.45. The orange's P(1) is 2596, q is 1.5. 
 
