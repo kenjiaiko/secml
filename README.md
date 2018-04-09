@@ -123,11 +123,11 @@ P(r) is population of r-th ranked city, q is a coefficient. The rank size rule i
 
 In the left image, the blue is a model of reported count without a malignant, the orange is a model of reported count with malignant. The blue's P(1) is 16, q is 0.45. The orange's P(1) is 2596, q is 1.5. 
 
-Look at the right image. Yellow and red (not linear one) are a real (reported) data. The orange is a model of the yellow, the blue is a model of the red. Blue and red approximate, but orange and yellow are not. What is this gap between orange and yellow?
+Look at the right image. Yellow and red (not linear one) are a real reported data. The orange is a model of the yellow, the blue is a model of the red. Blue and red approximate, but orange and yellow are not. What is this gap between orange and yellow?
 
 Actually, as malignant increases, it moves away from scale-free. To be accurate, the difference between 1st place and others will be more bigger. That is, the graph flows down. If malignant is not blocked, yellow will grow downwards and it will be maintained. Concept-Drift does not occur in this state.
 
-Next, the system will block some malignant (for example, top-10 of reported), then some malignants will (have to) change so that it will not be detected. As a result, it shifts to a structure where multiple malignants occupy the top. This is start of Concept-Drift on security (right image).
+Next, the system will block some malignant (for example, top-10 of reported), then some malignants will (have to) change so that it will not be detected. As a result, it shifts to a structure where multiple malignants occupy the top. This is start of Concept-Drift on security.
 
 The graph goes down if the difference between 1st and 2nd is big, it goes up if it is small. The difference between 1st and 2nd is small, means the system have blocked malignants at the moment.
 
