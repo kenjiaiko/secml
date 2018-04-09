@@ -96,7 +96,7 @@ image_data1-1.py will output 2 images([saved/1.jpg](saved/1.jpg), [saved/2.jpg](
 
  Images are different from strings, and it is difficult to extract features. Automation is possible, but you will need to be concerned about FalsePositive.
 
-## n-dimention array data
+## N-dimention array data
 ---will add---
 
 ## False Positive
