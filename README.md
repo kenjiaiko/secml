@@ -96,6 +96,9 @@ image_data1-1.py will output 2 images([saved/1.jpg](saved/1.jpg), [saved/2.jpg](
 
  Images are different from strings, and it is difficult to extract features. Automation is possible, but you will need to be concerned about FalsePositive.
 
+## n-dimention array data
+---will add---
+
 ## False Positive
 False-Positive rate should be less than 0.01% in security case. For example, Neural Network and SVM are very powerful algorithms, but False-Positive can not be less than 0.01%. And it is also difficult to investigate the cause of False-Positive. Our system have to update detection algorithm for keeping quality of it on a regular basis, however many advanced algorithms are not suitable for this. You should be concerned or be able to do the following even if you use advanced algorithms for machine learning.
 
