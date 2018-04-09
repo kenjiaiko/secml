@@ -130,6 +130,8 @@ Actually, as malignant increases, it moves away from scale-free. To be accurate,
 
 Next, the system will block some malignant (for example, top-10 of reported), then some malignants will (have to) change so that it will not be detected. As a result, it shifts to a structure where multiple malignants occupy the top. This is start of Concept-Drift on security.
 
+<img src="pngs/concept-drift1.jpg" width="180px"><img src="pngs/concept-drift2.jpg" width="180px"><img src="pngs/concept-drift3.jpg" width="180px">
+
 The graph goes down if the difference between 1st and 2nd is big, it goes up if it is small. The difference between 1st and 2nd is small, means the system have blocked malignants at the moment.
 
  Scale-free is a principle of nature, Concept-Drift is human intervention. And Scale-free will have slided by intervention of malignant.
