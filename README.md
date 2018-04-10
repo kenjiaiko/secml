@@ -90,14 +90,14 @@ $ python image_data1-1.py saved/P_20171207_124559_HDR.jpg saved/P_20171207_12460
 
 image_data1-1.py will output 2 images([saved/1.jpg](saved/1.jpg), [saved/2.jpg](saved/2.jpg)) that is extracted as similar parts in the two images.
 
----will add---
+---Additional---
 
 "Words" are features of strings, "Objects" are features of images. So (ideally) we want to use a object as a feature, but it is difficult. For example, [opencv](https://docs.opencv.org/master/d1/de0/tutorial_py_feature_homography.html) and [tensorflow](https://github.com/tensorflow/models/tree/master/research/object_detection) have the function for "object detection". However it seems that it is impossible to perfectly detect objects (ex: [Deep neural networks are easily fooled](http://www.evolvingai.org/fooling)). In addition, "object detection" is very heavy.
 
  Images are different from strings, and it is difficult to extract features. Automation is possible, but you will need to be concerned about FalsePositive.
 
 ## N-dimention array data
----will add---
+---Additional---
 
 ## False Positive
 False-Positive rate should be less than 0.01% in security case. For example, Neural Network and SVM are very powerful algorithms, but False-Positive can not be less than 0.01%. And it is also difficult to investigate the cause of False-Positive. Our system have to update detection algorithm for keeping quality of it on a regular basis, however many advanced algorithms are not suitable for this. You should be concerned or be able to do the following even if you use advanced algorithms for machine learning.
@@ -111,7 +111,10 @@ False positivity means that there is a "benign class (red circle)" in the "malic
 <img src="pngs/fp_in_circle.png" width="180px">
 
 So, one good way to lower False-Positive is to add a white list filter. Collect only the erroneously detected data-sets and extract their features, make white list filter (white list filter should be simple). The method of combining two or more algorithms with AND/OR is often effective for lowering/raising False-Positive/True-Positive (False-Positive and True-Positive are trade offs).
- 
+
+## Automation
+---Additional---
+
 ## Scale-free and Concept-Drift
 Finally I would like to mention the relationship between Scale-free and Concept-Drift.
 
