@@ -138,7 +138,7 @@ Next, the system will block some malignant (for example, top-10 of reported), th
 
 <img src="pngs/concept-drift1.jpg" width="180px"><img src="pngs/concept-drift2.jpg" width="180px"><img src="pngs/concept-drift3.jpg" width="180px">
 
-The graph goes down if the difference between 1st and 2nd is big, it goes up if it is small. The difference between 1st and 2nd is small, means the system have blocked malignants at the moment.
+The graph goes down curve like the left graph, if the difference between 1st and 2nd is big. Conversely, the difference between 1st and 2nd is small, means the graph goes up curve like the right graph. So, if the system have blocked malignants at the moment, the distribution will move from the left graph, go through the center graph (scale-free graph), to the right graph.
 
  Scale-free is a principle of nature, Concept-Drift is human intervention. And Scale-free will have slided by intervention of malignant.
 
