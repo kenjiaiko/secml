@@ -136,7 +136,7 @@ Actually, as malignant increases, it moves away from scale-free. To be accurate,
 
 Next, the system will block some malignant (for example, top-10 of reported), then some malignants will (have to) change so that it will not be detected. As a result, it shifts to a structure where multiple malignants occupy the top. This is start of Concept-Drift on security.
 
-<img src="pngs/concept-drift1.jpg" width="180px"><img src="pngs/concept-drift2.jpg" width="180px"><img src="pngs/concept-drift3.jpg" width="180px">
+<img src="pngs/concept-drift1.jpg" width="180px"><img src="pngs/concept-drift2.jpg" width="180px"><img src="pngs/concept-drift3.jpg" width="180px"><img src="pngs/concept-drift4.jpg" width="180px">
 
 The graph goes down curve like the left graph, if the difference between 1st and 2nd is big. Conversely, the difference between 1st and 2nd is small, means the graph goes up curve like the right graph. So, if the system have blocked malignants at the moment, the distribution will move from the left graph, go through the center graph (scale-free graph), to the right graph.
 
