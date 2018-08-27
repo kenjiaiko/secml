@@ -1,4 +1,4 @@
-This is a sample code using FFRI Dataset 2018(No include it) on MWS2018.
+This is a sample code using FFRI Dataset 2018 on MWS2018.
 ```
 cp FFRI_Dataset_2018/malware.csv ./malware.csv
 cp FFRI_Dataset_2018/cleanware.csv ./cleanware.csv
