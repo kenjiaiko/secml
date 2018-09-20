@@ -1,4 +1,4 @@
-This is a sample code to extract common features from 2d-array-data (like image). In this sample, common feature is '漢', sample4.jpg don't have it. detect_test1.py extracts the common features '漢' from all images, using [AKAZE](http://www.bmva.org/bmvc/2013/Papers/paper0013/paper0013.pdf).
+This is a sample code to extract common features from 2d-array-data (like image). In this sample, common feature is '漢', sample4.jpg don't have it. detect_test1.py extracts the common features '漢' from all images, using [AKAZE](http://www.bmva.org/bmvc/2013/Papers/paper0013/paper0013.pdf) in [opencv](https://opencv.org/).
 ```
 # python detect_test1.py 2/
 12 sample1.jpg
