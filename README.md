@@ -82,7 +82,7 @@ How about two-dimension array data, like images. We also want to do same thing f
 
 <img src="mws2018/image/2/sample1.jpg" width="150px"> <img src="mws2018/image/2/sample2.jpg" width="150px"> <img src="mws2018/image/2/sample3.jpg" width="150px"> <img src="mws2018/image/2/sample4.jpg" width="150px"> <img src="mws2018/image/2/sample5.jpg" width="150px">
 
-This is [the sample code](https://github.com/kenjiaiko/secml/tree/master/mws2018/image) to extract common features from 2d-array-data (like image). In this sample, common feature is '漢', sample4.jpg don't have it. detect_test1.py extracts the common features '漢' from all images, using [AKAZE](http://www.bmva.org/bmvc/2013/Papers/paper0013/paper0013.pdf) in [opencv](https://opencv.org/).
+This is [the sample code](https://github.com/kenjiaiko/secml/tree/master/mws2018/image) to extract common features from 2d-array-data (like image). In this sample, common feature is '漢', sample4.jpg don't have it. [detect_test1.py](https://github.com/kenjiaiko/secml/blob/master/mws2018/image/detect_test1.py) extracts the common features '漢' from all images, using [AKAZE](http://www.bmva.org/bmvc/2013/Papers/paper0013/paper0013.pdf) in [opencv](https://opencv.org/).
 
 ```
 # python detect_test1.py 2/
