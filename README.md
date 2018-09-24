@@ -80,9 +80,17 @@ LCS is the one of the method to solve it, this is not the only solution. The imp
 ## Image
 How about two-dimension array data, like images. We also want to do same thing for Image. There are several research how to extract common features of images (ex: [Feature Detection and Description](https://docs.opencv.org/master/db/d27/tutorial_py_table_of_contents_feature2d.html), [Grad-CAM: Why did you say that? Visual Explanations from Deep Networks via Gradient-based Localization](https://github.com/ramprs/grad-cam/)).
 
-<img src="mws2018/image/2/sample1.jpg" width="150px"> <img src="mws2018/image/2/sample2.jpg" width="150px"> <img src="mws2018/image/2/sample3.jpg" width="150px"> <img src="mws2018/image/2/sample4.jpg" width="150px"> <img src="mws2018/image/2/sample5.jpg" width="150px">
+If two images are given, the similar parts can be extracted from them using opencv. [image_data1-1.py](https://github.com/kenjiaiko/secml/blob/master/image_data1-1.py) will output 2 images([saved/1.jpg](saved/1.jpg), [saved/2.jpg](saved/2.jpg)) that is extracted as similar parts in the two images.
+
+```
+$ python image_data1-1.py saved/P_20171207_124559_HDR.jpg saved/P_20171207_124604_HDR.jpg
+```
+
+<img src="pngs/figure_11.jpg" width="350px">
 
 This is [the sample code](https://github.com/kenjiaiko/secml/tree/master/mws2018/image) to extract common features from 2d-array-data (like image). In this sample, common feature is '漢', sample4.jpg don't have it. [detect_test1.py](https://github.com/kenjiaiko/secml/blob/master/mws2018/image/detect_test1.py) extracts the common features '漢' from all images, using [AKAZE](http://www.bmva.org/bmvc/2013/Papers/paper0013/paper0013.pdf) in [opencv](https://opencv.org/).
+
+<img src="mws2018/image/2/sample1.jpg" width="150px"> <img src="mws2018/image/2/sample2.jpg" width="150px"> <img src="mws2018/image/2/sample3.jpg" width="150px"> <img src="mws2018/image/2/sample4.jpg" width="150px"> <img src="mws2018/image/2/sample5.jpg" width="150px">
 
 ```
 # python detect_test1.py 2/
