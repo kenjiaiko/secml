@@ -14,16 +14,25 @@ def onefile(path):
 		print path
 		return None
 	pr = {}
+	ff = []
 	for p in proc:
 		th = {}
 		for c in p["calls"]:
-			th.setdefault(c["thread_id"], [])
-			th[c["thread_id"]].append(c["api"])
-		pr.setdefault(p["process_id"], [])
-		pr[p["process_id"]].append(th)
+			if ff == []:
+				try:
+					xx = c["tid"]
+					ff = ["tid", "pid"]
+				except:
+					ff = ["thread_id", "process_id"]
+			th.setdefault(c[ff[0]], [])
+			th[c[ff[0]]].append(c["api"])
+		if ff == []:
+			continue
+		pr.setdefault(p[ff[1]], [])
+		pr[p[ff[1]]].append(th)
 	return pr
 
-def make_table(namelist):
+def maketable(namelist):
 	name2num = {}
 	num2name = {}
 	i = 1
@@ -36,13 +45,15 @@ def make_table(namelist):
 	r = { "name2num": name2num, "num2name": num2name }
 	return r
 
-def main(path, filename):
-	allfuncs = set()
+def main(srcpath, dstpath, dirname):
 	data = {}
-	for name in os.listdir(path):
+	allfuncs = set()
+	os.mkdir(dstpath + dirname)
+	i = 0
+	for name in os.listdir(srcpath):
 		if name.find(".json") == -1:
 			continue
-		pl = onefile(path + name)
+		pl = onefile(srcpath + name)
 		if pl == None:
 			continue
 		for pk in pl.keys():
@@ -52,12 +63,18 @@ def main(path, filename):
 						allfuncs.add(func)
 		data.setdefault(name, {})
 		data[name] = pl
-	r = make_table(list(allfuncs))
-	with open(filename + "t.pickle", "w") as f:
+		i += 1
+		if i % 100 == 0:
+			w = dstpath + dirname + "/" + str(i / 100) + ".pickle"
+			with open(w, "wb") as f:
+				pickle.dump(data, f)
+			data = {}
+	r = maketable(list(allfuncs))
+	with open(dstpath + dirname + "/t.pickle", "wb") as f:
 		pickle.dump(r, f)
-	with open(filename + "p.pickle", "w") as f:
-		pickle.dump(data, f)
 
 if __name__ == "__main__":
-	main(sys.argv[1], sys.argv[2])
-
+	srcpath = sys.argv[1]
+	dstpath = sys.argv[2]
+	dirname = sys.argv[3]
+	main(srcpath, dstpath, dirname)
