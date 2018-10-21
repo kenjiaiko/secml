@@ -1,7 +1,7 @@
 This is a sample code using FFRI Dataset 2018 on MWS2018.
 ```
 $ cp MWS_dataset/FFRI_Dataset_2018/FFRIDataset2018/malware.csv ./malware.csv
-$ cp MWS_dataset/FFRI_Dataset_2018/cleanware.csv ./cleanware.csv
+$ cp MWS_dataset/FFRI_Dataset_2018/FFRIDataset2018/cleanware.csv ./cleanware.csv
 $ python csv2json.py malware.csv
 $ python csv2json.py cleanware.csv
 $ python detect_test.py 10 10
