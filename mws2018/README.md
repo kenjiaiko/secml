@@ -1,7 +1,7 @@
 This is a sample code using FFRI Dataset 2018 on MWS2018.
 ```
-$ cp FFRIDataset2018/malware.csv ./malware.csv
-$ cp FFRIDataset2018/cleanware.csv ./cleanware.csv
+$ cp MWS_dataset/FFRI_Dataset_2018/FFRIDataset2018/malware.csv ./malware.csv
+$ cp MWS_dataset/FFRI_Dataset_2018/cleanware.csv ./cleanware.csv
 $ python csv2json.py malware.csv
 $ python csv2json.py cleanware.csv
 $ python detect_test.py 10 10
@@ -14,6 +14,9 @@ turn.1
 turn.2
 7430 19682
 0 210000
+```
+
+```
 $ python detect_test2.py 10 10
 1.step: read ok
 2.step: update ok
@@ -25,7 +28,6 @@ turn.2
 9128 19682
 0 210000
 ```
-
 
 ```
 $ python cuckoo2json.py MWS_dataset/FFRI_Dataset_2013/ ./ 2013
